@@ -1,5 +1,6 @@
 package com.workspace;
 
+import static org.hamcrest.Matchers.hasSize;
 import static io.restassured.RestAssured.given;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -54,16 +55,17 @@ public class UserControllerTest {
 
 
     @Test
-    void shouldGetAllUsers(){
-           var users = List.of(new Users(null,"Adesh","3636adesh"),
-                   new Users(null,"Yash","363yash"));
-           usersRepository.saveAll(users);
+    void shouldGetAllUsers() {
+        List<Users> users = List.of(new Users(1L, "Adesh", "3636adesh"),
+                new Users(2L, "Yash", "3636yash"));
+        usersRepository.saveAll(users);
 
-           given()
-                   .contentType(ContentType.JSON)
-                   .when()
-                   .get("api/users")
-                   .then()
-                   .statusCode(200)
-                  .body(".",hashSize(1);
+        given()
+                .contentType(ContentType.JSON)
+                .when()
+                .get("api/users")
+                .then()
+                .statusCode(200)
+                .body(".", hasSize(2));
+    }
 }

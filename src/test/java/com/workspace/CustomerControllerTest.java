@@ -1,7 +1,7 @@
 package com.workspace;
 
-import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.hasSize;
+import static io.restassured.RestAssured.given;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
