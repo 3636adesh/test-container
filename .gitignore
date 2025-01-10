@@ -1,0 +1,21 @@
+# IntelliJ IDEA-specific files
+.idea/
+
+# Maven-specific files
+target/
+
+# Java specific files
+*.class
+*.jar
+*.war
+
+# JetBrains IDE Preferences
+/.idea/*
+/.idea/**/*
+!/idea/misc.xml
+
+org.eclipse.*
+maven-wrapper.properties
+.git*
+mvnw.cmd
+mvnw
