@@ -14,7 +14,7 @@ public class UserController {
 
     private final UsersRepository usersRepository;
 
-    @Bean
+  /*  @Bean
     ApplicationRunner applicationRunner(){
         return  a-> checkAssert(null);
     }
@@ -22,7 +22,7 @@ public class UserController {
 
     private void checkAssert(Object object){
         Assert.notNull(object,"Object will never null");
-    }
+    }*/
 
 
 
